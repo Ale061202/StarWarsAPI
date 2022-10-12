@@ -1,1 +1,12 @@
-<p>vehicles works!</p>
+<h1 style="margin-left: 35%">Star Wars Vehicles</h1>
+<div>
+    <span *ngFor="let in of counter(); let i = index"><button (click)="getVehiclesPage(i+1)">{{i+1}}</button></span>
+</div>
+<div>
+  <mat-card class="example-card" *ngFor="let vehicle of vehiclesList;">
+    <mat-card-header>
+      <mat-card-title>{{ vehicle.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="getPhotoUrl(vehicle)" alt="Photo of a Shiba Inu">
+  </mat-card>
+</div>

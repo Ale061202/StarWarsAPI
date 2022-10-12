@@ -1,1 +1,12 @@
-<p>films works!</p>
+<h1 style="margin-left: 35%">Star Wars Films</h1>
+<div>
+    <span *ngFor="let in of counter(); let i = index"><button (click)="getFilmsPage(i+1)">{{i+1}}</button></span>
+</div>
+<div>
+  <mat-card class="example-card" *ngFor="let film of filmsList;">
+    <mat-card-header>
+      <mat-card-title>{{ film.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="getPhotoUrl(film)" alt="Photo of a Shiba Inu">
+  </mat-card>
+</div>

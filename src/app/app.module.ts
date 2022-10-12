@@ -10,6 +10,7 @@ import { FilmsComponent } from './components/films/films.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { PlanetsComponent } from './components/planets/planets.component';
+import { MaterialImportsModule } from './modules/material-imports.interface';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PlanetsComponent } from './components/planets/planets.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialImportsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
